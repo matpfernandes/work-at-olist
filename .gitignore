@@ -7,3 +7,6 @@
 *.log
 .env
 tmp
+.olist
+*.sqlite3
+__pycache__

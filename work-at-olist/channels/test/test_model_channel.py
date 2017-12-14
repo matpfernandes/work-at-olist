@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Channel
+from channels.models import Channel
 import uuid
 
 
@@ -18,7 +18,7 @@ class ChannelModelTest(TestCase):
         self.assertTrue(self.obj.name, 'Channel 1')
 
     def test_has_uuid(self):
-        '''Channel hannel must have a unique identifier '''
+        '''Channel must have a unique identifier '''
         uid = uuid.uuid4()
         self.assertIsInstance(self.obj.uuid, type(uid))
 

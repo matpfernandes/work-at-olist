@@ -4,8 +4,11 @@ from channels.models import Channel
 class ChannelSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Channel
-        fields = ('__all__')
+        exclude = ('slug',)
         lookup_field = 'slug'
         extra_kwargs = {
             'url': {'lookup_field': 'slug'}
         }
+
+class ChannelDetailSerializer(ChannelSerializer):
+    categories = serializers.StringRelatedField(many=True)

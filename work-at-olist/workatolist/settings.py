@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'test_without_migrations',
     'rest_framework',
+    'rest_framework_recursive',
     'channels',
     'mptt',
 ]

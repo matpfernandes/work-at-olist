@@ -11,17 +11,14 @@ class ChannelSerializer(serializers.HyperlinkedModelSerializer):
             'url': {'lookup_field': 'slug'}
         }
 
-class ChannelDetailSerializer(ChannelSerializer):
-    categories = serializers.StringRelatedField(many=True)
-
 class CategorySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Category
         fields=('name','uuid','slug')
-        lookup_field = 'slug'
-        extra_kwargs = {
-            'url': {'lookup_field': 'slug'}
-        }
+
+
+class ChannelDetailSerializer(ChannelSerializer):
+    categories = CategorySerializer(many=True, read_only=True)
 
 class CategoryDetailSerializer(CategorySerializer):
     channel = ChannelSerializer()

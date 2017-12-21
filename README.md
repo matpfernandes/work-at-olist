@@ -1,5 +1,19 @@
 # Work at Olist
 
+- link 
+   - http://olist-matpfernandes.herokuapp.com/
+
+- Endpoint to list existing channels
+   - http://olist-matpfernandes.herokuapp.com/channels/
+
+- Endpoint to list all categories and subcategories of a channel
+   - `http://olist-matpfernandes.herokuapp.com/channels/<channel-slug>/`
+   - Ex: http://olist-matpfernandes.herokuapp.com/channels/wallmart/
+
+- Endpoint to return a single category with their parent categories and subcategories.
+   - `http://olist-matpfernandes.herokuapp.com/categories/<category-slug>/`
+   - http://olist-matpfernandes.herokuapp.com/categories/wallmart-books/
+
 Olist is a company that offers an integration platform for sellers and
 marketplaces allowing them to sell their products across multiple channels.
 

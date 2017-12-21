@@ -26,7 +26,7 @@ class CategoryDetailSerializer(CategorySerializer):
     childrens = serializers.SerializerMethodField()
     class Meta:
         model = Category
-        fields = ('parents','childrens','channel')
+        fields = ('name','parents','childrens','channel')
 
     def get_parents(self, obj):
         """Returns a list of the serialized parents"""
